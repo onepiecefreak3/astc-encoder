@@ -22,30 +22,30 @@
     <ProjectGuid>{D6D60D86-0502-446A-8498-888F78B869C2}</ProjectGuid>
     <RootNamespace>astcenc</RootNamespace>
     <Keyword>Win32Proj</Keyword>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <CharacterSet>Unicode</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -162,13 +162,13 @@
     <ClCompile Include="..\..\astc_compute_variance.cpp" />
     <ClCompile Include="..\..\astc_decompress_symbolic.cpp" />
     <ClCompile Include="..\..\astc_encoding_choice_error.cpp" />
+    <ClCompile Include="..\..\astc_export.cpp" />
     <ClCompile Include="..\..\astc_find_best_partitioning.cpp" />
     <ClCompile Include="..\..\astc_ideal_endpoints_and_weights.cpp" />
     <ClCompile Include="..\..\astc_image_load_store.cpp" />
     <ClCompile Include="..\..\astc_integer_sequence.cpp" />
     <ClCompile Include="..\..\astc_kmeans_partitioning.cpp" />
     <ClCompile Include="..\..\astc_ktx_dds.cpp" />
-    <ClCompile Include="..\..\astc_main.cpp" />
     <ClCompile Include="..\..\astc_partition_tables.cpp" />
     <ClCompile Include="..\..\astc_percentile_tables.cpp" />
     <ClCompile Include="..\..\astc_pick_best_endpoint_format.cpp" />
@@ -184,6 +184,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\astc_codec_internals.h" />
+    <ClInclude Include="..\..\astc_export_struct.h" />
     <ClInclude Include="..\..\mathlib.h" />
     <ClInclude Include="..\..\softfloat.h" />
     <ClInclude Include="stdint.h" />
